@@ -43,16 +43,16 @@ button{
 }
 
 .QAarea{
-    margin-top: $spacer4;
-    h2{
-        margin-bottom: $spacer3;
-    }
+    margin-top: $spacer3;
+}
+
+.faqheading{
+  margin-top: $spacer4;
 }
 
 .footer{
     margin-top: $spacer3;
     width: 100%;
-    background: white;
     margin-bottom: 0;
 
     img{

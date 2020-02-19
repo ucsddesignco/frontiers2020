@@ -30,46 +30,47 @@ function App() {
             </button>
           </Col>
         </Row>
-
+        <h2 className="faqheading">Frequently Asked Questions</h2>
         <Row className="QAarea">
-          <h2 className="">Frequently Asked Questions</h2>
-          <QA
-            question="What is Design Frontiers?"
-            answer="Design Frontiers is a day-long design jam that allows students to tackle design challenges with the mentorship of product designers from Intuit. This quarter’s design jam with focus on personal finance."
-          />
-          <QA
-            question="What is a design jam?
+          <Col sm={6}>
+            <QA
+              question="What is Design Frontiers?"
+              answer="Design Frontiers is a day-long design jam that allows students to tackle design challenges with the mentorship of product designers from Intuit. This quarter’s design jam with focus on personal finance."
+            />
+            <QA
+              question="What is a design jam?
 "
-            answer="A design jam is an interactive process where participants have the opportunity to collaborate and use design thinking principles to rapidly innovate solutions to a given task under a time constraint.
+              answer="A design jam is an interactive process where participants have the opportunity to collaborate and use design thinking principles to rapidly innovate solutions to a given task under a time constraint.
 "
-          />
-          <QA
-            question="What is design thinking?
+            />
+            <QA
+              question="What is design thinking?
 "
-            answer="Design thinking is an ideology that advocates for a people-centered approach to innovative problem solving.  The design-thinking process comprises the key stages of empathizing, defining, ideating, prototyping, testing, and implementing.  
+              answer="Design thinking is an ideology that advocates for a people-centered approach to innovative problem solving.  The design-thinking process comprises the key stages of empathizing, defining, ideating, prototyping, testing, and implementing.  
 "
-          />
-          <QA
-            question="Will there be prizes?
+            />
+          </Col>
+          <Col sm={6}>
+            <QA
+              question="Will there be prizes?
 "
-            answer="Yes! Winning teams will receive cool prizes :)
+              answer="Yes! Winning teams will receive cool prizes :)
 "
-          />
-          <QA
-            question="Will there be food?
+            />
+            <QA
+              question="Will there be food?
 "
-            answer="We will be providing light refreshments for breakfast, lunch, and snacks throughout the day.
+              answer="We will be providing light refreshments for breakfast, lunch, and snacks throughout the day.
 "
-          />
-          <QA
-            question="What should I bring?
+            />
+            <QA
+              question="What should I bring?
 "
-            answer="We recommend bringing your laptop, charger, and water bottle. We’ll provide all the post-its and paper!
+              answer="We recommend bringing your laptop, charger, and water bottle. We’ll provide all the post-its and paper!
 "
-          />
+            />
+          </Col>
         </Row>
-      </Container>
-      <div style={{ width: "100%", background: "white" }}>
         <Row justify="center" className="footer">
           <Col sm={2} xs={6}>
             <img src={require("./images/intuit.png")} />
@@ -78,7 +79,7 @@ function App() {
             <img src={require("./images/ucsdlogo.png")} />
           </Col>
         </Row>
-      </div>
+      </Container>
     </div>
   );
 }
