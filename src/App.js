@@ -14,7 +14,7 @@ function App() {
           </Col>
           <Col sm={6}>
             <h1>Design Frontiers</h1>
-            <h2>sponsored by Intuit</h2>
+            <h2>Unlocking Smart Money Decisions with Intuit</h2>
             <p>
               A day long design jam hosted <br />
               in collaboration with Intuit
