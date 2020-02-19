@@ -21,7 +21,10 @@ function App() {
             </p>
             <p>Feb. 23, 2020 @ Multipurpose Room SSC</p>
             <button type="button">
-              <a href="https://docs.google.com/forms/d/e/1FAIpQLSccaWzOpcud2x52teR8D5ZPDhVVOjHlBQSNTCvr5msQ8q9SmA/viewform" target="_blank">
+              <a
+                href="https://docs.google.com/forms/d/e/1FAIpQLSccaWzOpcud2x52teR8D5ZPDhVVOjHlBQSNTCvr5msQ8q9SmA/viewform"
+                target="_blank"
+              >
                 SIGN UP
               </a>
             </button>
@@ -46,9 +49,27 @@ function App() {
             answer="Design thinking is an ideology that advocates for a people-centered approach to innovative problem solving.  The design-thinking process comprises the key stages of empathizing, defining, ideating, prototyping, testing, and implementing.  
 "
           />
+          <QA
+            question="Will there be prizes?
+"
+            answer="Yes! Winning teams will receive cool prizes :)
+"
+          />
+          <QA
+            question="Will there be food?
+"
+            answer="We will be providing light refreshments for breakfast, lunch, and snacks throughout the day.
+"
+          />
+          <QA
+            question="What should I bring?
+"
+            answer="We recommend bringing your laptop, charger, and water bottle. We’ll provide all the post-its and paper!
+"
+          />
         </Row>
       </Container>
-      <div style={{width: "100%", background: "white"}}>
+      <div style={{ width: "100%", background: "white" }}>
         <Row justify="center" className="footer">
           <Col sm={2} xs={6}>
             <img src={require("./images/intuit.png")} />
