@@ -1,0 +1,2000 @@
+@charset "UTF-8";
+/* Breakpoints */
+/*!
+ * Hamburgers
+ * @description Tasty CSS-animated hamburgers
+ * @author Jonathan Suh @jonsuh
+ * @site https://jonsuh.com/hamburgers
+ * @link https://github.com/jonsuh/hamburgers
+ */
+.hamburger {
+  padding: 0 0;
+  display: inline-block;
+  cursor: pointer;
+  transition-property: opacity, -webkit-filter;
+  transition-property: opacity, filter;
+  transition-property: opacity, filter, -webkit-filter;
+  transition-duration: 0.15s;
+  transition-timing-function: linear;
+  font: inherit;
+  color: inherit;
+  text-transform: none;
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  overflow: visible;
+}
+.hamburger:hover {
+  opacity: 1;
+}
+
+.hamburger-box {
+  width: 2.6rem;
+  height: 1.6rem;
+  display: inline-block;
+  position: relative;
+}
+
+.hamburger-inner {
+  display: block;
+  top: 50%;
+  margin-top: -0.1rem;
+}
+.hamburger-inner,
+.hamburger-inner::before,
+.hamburger-inner::after {
+  width: 2.6rem;
+  height: 0.2rem;
+  background-color: #1e1f23;
+  border-radius: 0;
+  position: absolute;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  transition-duration: 0.15s;
+  transition-timing-function: ease;
+}
+.hamburger-inner::before,
+.hamburger-inner::after {
+  content: "";
+  display: block;
+}
+.hamburger-inner::before {
+  top: -0.7rem;
+}
+.hamburger-inner::after {
+  bottom: -0.7rem;
+}
+
+/*
+@import "types/3dx";
+@import "types/3dx-r";
+@import "types/3dy";
+@import "types/3dy-r";
+@import "types/3dxy";
+@import "types/3dxy-r";
+@import "types/arrow";
+@import "types/arrow-r";
+@import "types/arrowalt";
+@import "types/arrowalt-r";
+@import "types/arrowturn";
+@import "types/arrowturn-r";
+@import "types/boring";
+@import "types/collapse";
+@import "types/collapse-r";
+@import "types/elastic";
+@import "types/elastic-r";
+@import "types/emphatic";
+@import "types/emphatic-r";
+@import "types/minus";
+@import "types/slider";
+@import "types/slider-r"; */
+/* Spin */
+.hamburger--spin .hamburger-inner {
+  transition-duration: 0.22s;
+  transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+.hamburger--spin .hamburger-inner::before {
+  transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
+}
+.hamburger--spin .hamburger-inner::after {
+  transition: bottom 0.1s 0.25s ease-in,
+    -webkit-transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  transition: bottom 0.1s 0.25s ease-in,
+    transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  transition: bottom 0.1s 0.25s ease-in,
+    transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19),
+    -webkit-transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+.hamburger--spin.is-active .hamburger-inner {
+  -webkit-transform: rotate(225deg);
+  transform: rotate(225deg);
+  transition-delay: 0.12s;
+  transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.hamburger--spin.is-active .hamburger-inner::before {
+  top: 0;
+  opacity: 0;
+  transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
+}
+.hamburger--spin.is-active .hamburger-inner::after {
+  bottom: 0;
+  -webkit-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  transition: bottom 0.1s ease-out,
+    -webkit-transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: bottom 0.1s ease-out,
+    transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: bottom 0.1s ease-out,
+    transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1),
+    -webkit-transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+/*
+@import "types/spin-r";
+@import "types/spring";
+@import "types/spring-r";
+@import "types/stand";
+@import "types/stand-r";
+@import "types/squeeze";
+@import "types/vortex";
+@import "types/vortex-r"; */
+/* Spin */
+.hamburger--spin .hamburger-inner {
+  transition-duration: 0.22s;
+  transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+.hamburger--spin .hamburger-inner::before {
+  transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
+}
+.hamburger--spin .hamburger-inner::after {
+  transition: bottom 0.1s 0.25s ease-in,
+    -webkit-transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  transition: bottom 0.1s 0.25s ease-in,
+    transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  transition: bottom 0.1s 0.25s ease-in,
+    transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19),
+    -webkit-transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+.hamburger--spin.is-active .hamburger-inner {
+  -webkit-transform: rotate(225deg);
+  transform: rotate(225deg);
+  transition-delay: 0.12s;
+  transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.hamburger--spin.is-active .hamburger-inner::before {
+  top: 0;
+  opacity: 0;
+  transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
+}
+.hamburger--spin.is-active .hamburger-inner::after {
+  bottom: 0;
+  -webkit-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  transition: bottom 0.1s ease-out,
+    -webkit-transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: bottom 0.1s ease-out,
+    transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: bottom 0.1s ease-out,
+    transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1),
+    -webkit-transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+/*------------------------------------*\ $CSSWIZARDRY-GRIDS
+\*------------------------------------*/
+/** CONTENTS INTRODUCTION.........How the grid system works. VARIABLES............Your settings. MIXINS...............Library mixins. GRID SETUP...........Build the grid structure. WIDTHS...............Build our responsive widths around our breakpoints. PUSH.................Push classes. PULL.................Pull classes. */
+/*------------------------------------*\ $INTRODUCTION
+\*------------------------------------*/
+/** csswizardry grids provides you with widths to suit a number of breakpoints designed around devices of a size you specify. Out of the box, csswizardry grids caters to the following types of device:  palm     --  palm-based devices, like phones and small tablets lap      --  lap-based devices, like iPads or laptops portable --  all of the above desk     --  stationary devices, like desktop computers regular  --  any/all types of device  These namespaces are then used in the library to give you the ability to manipulate your layouts based around them, for example:  <div class="grid__item  one-whole  lap--one-half  desk--one-third">  This would give you a grid item which is 100% width unless it is on a lap device, at which point it become 50% wide, or it is on a desktop device, at which point it becomes 33.333% width.  csswizardry grids also has push and pull classes which allow you to nudge grid items left and right by a defined amount. These follow the same naming convention as above, but are prepended by either `push--` or `pull--`, for example:  `class="grid__item  one-half  push--one-half"`  This would give you a grid item which is 50% width and pushed over to the right by 50%.  All classes in csswizardry grids follow this patten, so you should fairly quickly be able to piece together any combinations you can imagine, for example:  `class="grid__item  one-whole  lap--one-half  desk--one-third  push--desk--one-third"`  `class="grid__item  one-quarter  palm--one-half  push--palm--one-half"`  `class="grid__item  palm--one-third  desk--five-twelfths"` */
+/*------------------------------------*\ $VARIABLES
+\*------------------------------------*/
+/** If you are building a non-responsive site but would still like to use csswizardry-grids, set this to ‘false’: */
+/** Is this build mobile first? Setting to ‘true’ means that all grids will be 100% width if you do not apply a more specific class to them. */
+/** Set the spacing between your grid items. */
+/** Would you like Sass’ silent classes, or regular CSS classes? */
+/** Would you like push and pull classes enabled? */
+/** Using `inline-block` means that the grid items need their whitespace removing in order for them to work correctly. Set the following to true if you are going to achieve this by manually removing/commenting out any whitespace in your HTML yourself.  Setting this to false invokes a hack which cannot always be guaranteed, please see the following for more detail:  github.com/csswizardry/csswizardry-grids/commit/744d4b23c9d2b77d605b5991e54a397df72e0688 github.com/csswizardry/inuit.css/issues/170#issuecomment-14859371 */
+/** Define your breakpoints. The first value is the prefix that shall be used for your classes (e.g. `.palm--one-half`), the second value is the media query that the breakpoint fires at. */
+/** Define which namespaced breakpoints you would like to generate for each of widths, push and pull. This is handy if you only need pull on, say, desk, or you only need a new width breakpoint at mobile sizes. It allows you to only compile as much CSS as you need. All are turned on by default, but you can add and remove breakpoints at will.  Push and pull shall only be used if `$push` and/or `$pull` and `$responsive` have been set to ‘true’. */
+/** You do not need to edit anything from this line onward; csswizardry-grids is good to go. Happy griddin’! */
+/*------------------------------------*\ $MIXINS
+\*------------------------------------*/
+/** These mixins are for the library to use only, you should not need to modify them at all.  Enclose a block of code with a media query as named in `$breakpoints`. */
+/** Drop relative positioning into silent classes which can’t take advantage of the `[class*="push--"]` and `[class*="pull--"]` selectors. */
+/*------------------------------------*\ $GRID SETUP
+\*------------------------------------*/
+/** 1. Allow the grid system to be used on lists. 2. Remove any margins and paddings that might affect the grid system. 3. Apply a negative `margin-left` to negate the columns’ gutters. */
+.grid {
+  list-style: none; /* [1] */
+  margin: 0; /* [2] */
+  padding: 0; /* [2] */
+  margin-left: -5rem; /* [3] */
+  letter-spacing: -0.31em;
+}
+
+/* Opera hack */
+.opera:-o-prefocus,
+.grid {
+  word-spacing: -0.43em;
+}
+
+/** 1. Cause columns to stack side-by-side. 2. Space columns apart. 3. Align columns to the tops of each other. 4. Full-width unless told to behave otherwise. 5. Required to combine fluid widths and fixed gutters. */
+.grid__item {
+  display: inline-block; /* [1] */
+  padding-left: 5rem; /* [2] */
+  vertical-align: top; /* [3] */
+  width: 100%; /* [4] */ /* [5] */ /* [5] */
+  box-sizing: border-box; /* [5] */
+  letter-spacing: normal;
+  word-spacing: normal;
+}
+
+/** Reversed grids allow you to structure your source in the opposite order to how your rendered layout will appear. Extends `.grid`. */
+.grid--rev {
+  direction: rtl;
+  text-align: left;
+}
+.grid--rev > .grid__item {
+  direction: ltr;
+  text-align: left;
+}
+
+/** Gutterless grids have all the properties of regular grids, minus any spacing. Extends `.grid`. */
+.grid--full {
+  margin-left: 0;
+}
+.grid--full > .grid__item {
+  padding-left: 0;
+}
+
+/** Align the entire grid to the right. Extends `.grid`. */
+.grid--right {
+  text-align: right;
+}
+.grid--right > .grid__item {
+  text-align: left;
+}
+
+/** Centered grids align grid items centrally without needing to use push or pull classes. Extends `.grid`. */
+.grid--center {
+  text-align: center;
+}
+.grid--center > .grid__item {
+  text-align: left;
+}
+
+/** Align grid cells vertically (`.grid--middle` or `.grid--bottom`). Extends `.grid`. */
+.grid--middle > .grid__item {
+  vertical-align: middle;
+}
+
+.grid--bottom > .grid__item {
+  vertical-align: bottom;
+}
+
+/** Create grids with narrower gutters. Extends `.grid`. */
+.grid--narrow {
+  margin-left: -2.5rem;
+}
+.grid--narrow > .grid__item {
+  padding-left: 2.5rem;
+}
+
+/** Create grids with wider gutters. Extends `.grid`. */
+.grid--wide {
+  margin-left: -10rem;
+}
+.grid--wide > .grid__item {
+  padding-left: 10rem;
+}
+
+/*------------------------------------*\ $WIDTHS
+\*------------------------------------*/
+/** Create our width classes, prefixed by the specified namespace. */
+/** Our regular, non-responsive width classes. */
+/** Whole */
+.one-whole {
+  width: 100%;
+}
+
+/** Halves */
+.one-half,
+.two-quarters,
+.three-sixths,
+.four-eighths,
+.five-tenths,
+.six-twelfths {
+  width: 50%;
+}
+
+/** Thirds */
+.one-third,
+.two-sixths,
+.four-twelfths {
+  width: 33.333%;
+}
+
+.two-thirds,
+.four-sixths,
+.eight-twelfths {
+  width: 66.666%;
+}
+
+/** Quarters */
+.one-quarter,
+.two-eighths,
+.three-twelfths {
+  width: 25%;
+}
+
+.three-quarters,
+.six-eighths,
+.nine-twelfths {
+  width: 75%;
+}
+
+/** Fifths */
+.one-fifth,
+.two-tenths {
+  width: 20%;
+}
+
+.two-fifths,
+.four-tenths {
+  width: 40%;
+}
+
+.three-fifths,
+.six-tenths {
+  width: 60%;
+}
+
+.four-fifths,
+.eight-tenths {
+  width: 80%;
+}
+
+/** Sixths */
+.one-sixth,
+.two-twelfths {
+  width: 16.666%;
+}
+
+.five-sixths,
+.ten-twelfths {
+  width: 83.333%;
+}
+
+/** Eighths */
+.one-eighth {
+  width: 12.5%;
+}
+
+.three-eighths {
+  width: 37.5%;
+}
+
+.five-eighths {
+  width: 62.5%;
+}
+
+.seven-eighths {
+  width: 87.5%;
+}
+
+/** Tenths */
+.one-tenth {
+  width: 10%;
+}
+
+.three-tenths {
+  width: 30%;
+}
+
+.seven-tenths {
+  width: 70%;
+}
+
+.nine-tenths {
+  width: 90%;
+}
+
+/** Twelfths */
+.one-twelfth {
+  width: 8.333%;
+}
+
+.five-twelfths {
+  width: 41.666%;
+}
+
+.seven-twelfths {
+  width: 58.333%;
+}
+
+.eleven-twelfths {
+  width: 91.666%;
+}
+
+/** Our responsive classes, if we have enabled them. */
+@media only screen and (max-width: 480px) {
+  /** Whole */
+  .palm--one-whole {
+    width: 100%;
+  }
+  /** Halves */
+  .palm--one-half,
+  .palm--two-quarters,
+  .palm--three-sixths,
+  .palm--four-eighths,
+  .palm--five-tenths,
+  .palm--six-twelfths {
+    width: 50%;
+  }
+  /** Thirds */
+  .palm--one-third,
+  .palm--two-sixths,
+  .palm--four-twelfths {
+    width: 33.333%;
+  }
+  .palm--two-thirds,
+  .palm--four-sixths,
+  .palm--eight-twelfths {
+    width: 66.666%;
+  }
+  /** Quarters */
+  .palm--one-quarter,
+  .palm--two-eighths,
+  .palm--three-twelfths {
+    width: 25%;
+  }
+  .palm--three-quarters,
+  .palm--six-eighths,
+  .palm--nine-twelfths {
+    width: 75%;
+  }
+  /** Fifths */
+  .palm--one-fifth,
+  .palm--two-tenths {
+    width: 20%;
+  }
+  .palm--two-fifths,
+  .palm--four-tenths {
+    width: 40%;
+  }
+  .palm--three-fifths,
+  .palm--six-tenths {
+    width: 60%;
+  }
+  .palm--four-fifths,
+  .palm--eight-tenths {
+    width: 80%;
+  }
+  /** Sixths */
+  .palm--one-sixth,
+  .palm--two-twelfths {
+    width: 16.666%;
+  }
+  .palm--five-sixths,
+  .palm--ten-twelfths {
+    width: 83.333%;
+  }
+  /** Eighths */
+  .palm--one-eighth {
+    width: 12.5%;
+  }
+  .palm--three-eighths {
+    width: 37.5%;
+  }
+  .palm--five-eighths {
+    width: 62.5%;
+  }
+  .palm--seven-eighths {
+    width: 87.5%;
+  }
+  /** Tenths */
+  .palm--one-tenth {
+    width: 10%;
+  }
+  .palm--three-tenths {
+    width: 30%;
+  }
+  .palm--seven-tenths {
+    width: 70%;
+  }
+  .palm--nine-tenths {
+    width: 90%;
+  }
+  /** Twelfths */
+  .palm--one-twelfth {
+    width: 8.333%;
+  }
+  .palm--five-twelfths {
+    width: 41.666%;
+  }
+  .palm--seven-twelfths {
+    width: 58.333%;
+  }
+  .palm--eleven-twelfths {
+    width: 91.666%;
+  }
+}
+@media only screen and (min-width: 481px) and (max-width: 1023px) {
+  /** Whole */
+  .lap--one-whole {
+    width: 100%;
+  }
+  /** Halves */
+  .lap--one-half,
+  .lap--two-quarters,
+  .lap--three-sixths,
+  .lap--four-eighths,
+  .lap--five-tenths,
+  .lap--six-twelfths {
+    width: 50%;
+  }
+  /** Thirds */
+  .lap--one-third,
+  .lap--two-sixths,
+  .lap--four-twelfths {
+    width: 33.333%;
+  }
+  .lap--two-thirds,
+  .lap--four-sixths,
+  .lap--eight-twelfths {
+    width: 66.666%;
+  }
+  /** Quarters */
+  .lap--one-quarter,
+  .lap--two-eighths,
+  .lap--three-twelfths {
+    width: 25%;
+  }
+  .lap--three-quarters,
+  .lap--six-eighths,
+  .lap--nine-twelfths {
+    width: 75%;
+  }
+  /** Fifths */
+  .lap--one-fifth,
+  .lap--two-tenths {
+    width: 20%;
+  }
+  .lap--two-fifths,
+  .lap--four-tenths {
+    width: 40%;
+  }
+  .lap--three-fifths,
+  .lap--six-tenths {
+    width: 60%;
+  }
+  .lap--four-fifths,
+  .lap--eight-tenths {
+    width: 80%;
+  }
+  /** Sixths */
+  .lap--one-sixth,
+  .lap--two-twelfths {
+    width: 16.666%;
+  }
+  .lap--five-sixths,
+  .lap--ten-twelfths {
+    width: 83.333%;
+  }
+  /** Eighths */
+  .lap--one-eighth {
+    width: 12.5%;
+  }
+  .lap--three-eighths {
+    width: 37.5%;
+  }
+  .lap--five-eighths {
+    width: 62.5%;
+  }
+  .lap--seven-eighths {
+    width: 87.5%;
+  }
+  /** Tenths */
+  .lap--one-tenth {
+    width: 10%;
+  }
+  .lap--three-tenths {
+    width: 30%;
+  }
+  .lap--seven-tenths {
+    width: 70%;
+  }
+  .lap--nine-tenths {
+    width: 90%;
+  }
+  /** Twelfths */
+  .lap--one-twelfth {
+    width: 8.333%;
+  }
+  .lap--five-twelfths {
+    width: 41.666%;
+  }
+  .lap--seven-twelfths {
+    width: 58.333%;
+  }
+  .lap--eleven-twelfths {
+    width: 91.666%;
+  }
+}
+@media only screen and (min-width: 481px) {
+  /** Whole */
+  .lap-up--one-whole {
+    width: 100%;
+  }
+  /** Halves */
+  .lap-up--one-half,
+  .lap-up--two-quarters,
+  .lap-up--three-sixths,
+  .lap-up--four-eighths,
+  .lap-up--five-tenths,
+  .lap-up--six-twelfths {
+    width: 50%;
+  }
+  /** Thirds */
+  .lap-up--one-third,
+  .lap-up--two-sixths,
+  .lap-up--four-twelfths {
+    width: 33.333%;
+  }
+  .lap-up--two-thirds,
+  .lap-up--four-sixths,
+  .lap-up--eight-twelfths {
+    width: 66.666%;
+  }
+  /** Quarters */
+  .lap-up--one-quarter,
+  .lap-up--two-eighths,
+  .lap-up--three-twelfths {
+    width: 25%;
+  }
+  .lap-up--three-quarters,
+  .lap-up--six-eighths,
+  .lap-up--nine-twelfths {
+    width: 75%;
+  }
+  /** Fifths */
+  .lap-up--one-fifth,
+  .lap-up--two-tenths {
+    width: 20%;
+  }
+  .lap-up--two-fifths,
+  .lap-up--four-tenths {
+    width: 40%;
+  }
+  .lap-up--three-fifths,
+  .lap-up--six-tenths {
+    width: 60%;
+  }
+  .lap-up--four-fifths,
+  .lap-up--eight-tenths {
+    width: 80%;
+  }
+  /** Sixths */
+  .lap-up--one-sixth,
+  .lap-up--two-twelfths {
+    width: 16.666%;
+  }
+  .lap-up--five-sixths,
+  .lap-up--ten-twelfths {
+    width: 83.333%;
+  }
+  /** Eighths */
+  .lap-up--one-eighth {
+    width: 12.5%;
+  }
+  .lap-up--three-eighths {
+    width: 37.5%;
+  }
+  .lap-up--five-eighths {
+    width: 62.5%;
+  }
+  .lap-up--seven-eighths {
+    width: 87.5%;
+  }
+  /** Tenths */
+  .lap-up--one-tenth {
+    width: 10%;
+  }
+  .lap-up--three-tenths {
+    width: 30%;
+  }
+  .lap-up--seven-tenths {
+    width: 70%;
+  }
+  .lap-up--nine-tenths {
+    width: 90%;
+  }
+  /** Twelfths */
+  .lap-up--one-twelfth {
+    width: 8.333%;
+  }
+  .lap-up--five-twelfths {
+    width: 41.666%;
+  }
+  .lap-up--seven-twelfths {
+    width: 58.333%;
+  }
+  .lap-up--eleven-twelfths {
+    width: 91.666%;
+  }
+}
+@media only screen and (max-width: 1023px) {
+  /** Whole */
+  .portable--one-whole {
+    width: 100%;
+  }
+  /** Halves */
+  .portable--one-half,
+  .portable--two-quarters,
+  .portable--three-sixths,
+  .portable--four-eighths,
+  .portable--five-tenths,
+  .portable--six-twelfths {
+    width: 50%;
+  }
+  /** Thirds */
+  .portable--one-third,
+  .portable--two-sixths,
+  .portable--four-twelfths {
+    width: 33.333%;
+  }
+  .portable--two-thirds,
+  .portable--four-sixths,
+  .portable--eight-twelfths {
+    width: 66.666%;
+  }
+  /** Quarters */
+  .portable--one-quarter,
+  .portable--two-eighths,
+  .portable--three-twelfths {
+    width: 25%;
+  }
+  .portable--three-quarters,
+  .portable--six-eighths,
+  .portable--nine-twelfths {
+    width: 75%;
+  }
+  /** Fifths */
+  .portable--one-fifth,
+  .portable--two-tenths {
+    width: 20%;
+  }
+  .portable--two-fifths,
+  .portable--four-tenths {
+    width: 40%;
+  }
+  .portable--three-fifths,
+  .portable--six-tenths {
+    width: 60%;
+  }
+  .portable--four-fifths,
+  .portable--eight-tenths {
+    width: 80%;
+  }
+  /** Sixths */
+  .portable--one-sixth,
+  .portable--two-twelfths {
+    width: 16.666%;
+  }
+  .portable--five-sixths,
+  .portable--ten-twelfths {
+    width: 83.333%;
+  }
+  /** Eighths */
+  .portable--one-eighth {
+    width: 12.5%;
+  }
+  .portable--three-eighths {
+    width: 37.5%;
+  }
+  .portable--five-eighths {
+    width: 62.5%;
+  }
+  .portable--seven-eighths {
+    width: 87.5%;
+  }
+  /** Tenths */
+  .portable--one-tenth {
+    width: 10%;
+  }
+  .portable--three-tenths {
+    width: 30%;
+  }
+  .portable--seven-tenths {
+    width: 70%;
+  }
+  .portable--nine-tenths {
+    width: 90%;
+  }
+  /** Twelfths */
+  .portable--one-twelfth {
+    width: 8.333%;
+  }
+  .portable--five-twelfths {
+    width: 41.666%;
+  }
+  .portable--seven-twelfths {
+    width: 58.333%;
+  }
+  .portable--eleven-twelfths {
+    width: 91.666%;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  /** Whole */
+  .desk--one-whole {
+    width: 100%;
+  }
+  /** Halves */
+  .desk--one-half,
+  .desk--two-quarters,
+  .desk--three-sixths,
+  .desk--four-eighths,
+  .desk--five-tenths,
+  .desk--six-twelfths {
+    width: 50%;
+  }
+  /** Thirds */
+  .desk--one-third,
+  .desk--two-sixths,
+  .desk--four-twelfths {
+    width: 33.333%;
+  }
+  .desk--two-thirds,
+  .desk--four-sixths,
+  .desk--eight-twelfths {
+    width: 66.666%;
+  }
+  /** Quarters */
+  .desk--one-quarter,
+  .desk--two-eighths,
+  .desk--three-twelfths {
+    width: 25%;
+  }
+  .desk--three-quarters,
+  .desk--six-eighths,
+  .desk--nine-twelfths {
+    width: 75%;
+  }
+  /** Fifths */
+  .desk--one-fifth,
+  .desk--two-tenths {
+    width: 20%;
+  }
+  .desk--two-fifths,
+  .desk--four-tenths {
+    width: 40%;
+  }
+  .desk--three-fifths,
+  .desk--six-tenths {
+    width: 60%;
+  }
+  .desk--four-fifths,
+  .desk--eight-tenths {
+    width: 80%;
+  }
+  /** Sixths */
+  .desk--one-sixth,
+  .desk--two-twelfths {
+    width: 16.666%;
+  }
+  .desk--five-sixths,
+  .desk--ten-twelfths {
+    width: 83.333%;
+  }
+  /** Eighths */
+  .desk--one-eighth {
+    width: 12.5%;
+  }
+  .desk--three-eighths {
+    width: 37.5%;
+  }
+  .desk--five-eighths {
+    width: 62.5%;
+  }
+  .desk--seven-eighths {
+    width: 87.5%;
+  }
+  /** Tenths */
+  .desk--one-tenth {
+    width: 10%;
+  }
+  .desk--three-tenths {
+    width: 30%;
+  }
+  .desk--seven-tenths {
+    width: 70%;
+  }
+  .desk--nine-tenths {
+    width: 90%;
+  }
+  /** Twelfths */
+  .desk--one-twelfth {
+    width: 8.333%;
+  }
+  .desk--five-twelfths {
+    width: 41.666%;
+  }
+  .desk--seven-twelfths {
+    width: 58.333%;
+  }
+  .desk--eleven-twelfths {
+    width: 91.666%;
+  }
+}
+/*------------------------------------*\ $PUSH
+\*------------------------------------*/
+/** Push classes, to move grid items over to the right by certain amounts. */
+/*------------------------------------*\ $PULL
+\*------------------------------------*/
+/** Pull classes, to move grid items back to the left by certain amounts. */
+/* http://meyerweb.com/eric/tools/css/reset/ v2.0 | 20110126 License: none (public domain)
+*/
+a,
+abbr,
+acronym,
+address,
+applet,
+article,
+aside,
+audio,
+b,
+big,
+blockquote,
+body,
+canvas,
+caption,
+center,
+cite,
+code,
+dd,
+del,
+details,
+dfn,
+div,
+dl,
+dt,
+em,
+embed,
+fieldset,
+figcaption,
+figure,
+footer,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+hgroup,
+html,
+i,
+iframe,
+img,
+ins,
+kbd,
+label,
+legend,
+li,
+mark,
+menu,
+nav,
+object,
+ol,
+output,
+p,
+h3,
+p a,
+pre,
+q,
+ruby,
+s,
+samp,
+section,
+small,
+span,
+strike,
+strong,
+sub,
+summary,
+sup,
+table,
+tbody,
+td,
+tfoot,
+th,
+thead,
+time,
+tr,
+tt,
+u,
+ul,
+var,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:after,
+blockquote:before,
+q:after,
+q:before {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Custom reset */
+button:focus {
+  outline: 0;
+}
+
+/* Helpers */
+.no-scroll {
+  position: fixed;
+}
+
+.bleed-right {
+  margin-right: -10vw;
+}
+@media (min-width: 840px) {
+  .bleed-right {
+    margin-right: -10vw;
+  }
+}
+@media (min-width: 960px) {
+  .bleed-right {
+    margin-right: -7rem;
+  }
+}
+@media (min-width: 1280px) {
+  .bleed-right {
+    margin-right: -11rem;
+  }
+}
+
+@media (min-width: 840px) {
+  .collapse {
+    display: none;
+  }
+}
+
+.expand {
+  display: none;
+}
+@media (min-width: 840px) {
+  .expand {
+    display: inline-block;
+  }
+}
+
+.bg-dark {
+  background-color: #1e1f23;
+  color: #fff;
+}
+.bg-dark h1,
+.bg-dark h2 {
+  color: #878791;
+}
+
+.color-accent {
+  color: #5769ec;
+}
+
+/* Base styles */
+html {
+  font-size: 62.5%;
+  position: relative;
+}
+@media (min-width: 1440px) {
+  html {
+    font-size: 0.7vw;
+  }
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+}
+
+.body-wrapper {
+  min-height: calc(100vh - 10rem);
+}
+
+.container {
+  padding: 5rem 10vw;
+}
+@media (min-width: 840px) {
+  .container {
+    padding: 8rem 10vw;
+  }
+}
+@media (min-width: 960px) {
+  .container {
+    padding-left: 22rem;
+    padding-right: 7rem;
+  }
+}
+@media (min-width: 1280px) {
+  .container {
+    padding-left: 26rem;
+    padding-right: 11rem;
+  }
+}
+
+.container-sm {
+  padding: 2.5rem 10vw;
+}
+
+.card {
+  margin-bottom: 5rem;
+}
+.card:last-child {
+  margin-bottom: 0;
+}
+
+.card-img img {
+  width: 100%;
+}
+
+.card-text {
+  margin-top: 1.5rem;
+}
+@media (min-width: 840px) {
+  .card-text {
+    margin-top: 2.5rem;
+  }
+}
+
+.btn {
+  text-align: center;
+  display: inline-block;
+  padding: 1.5rem;
+  padding: 1.6rem 1.5rem 1.5rem;
+  white-space: nowrap;
+  text-transform: uppercase;
+  font-size: 1.2rem !important;
+  line-height: 0;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+@media (hover: hover) {
+  .btn:hover {
+    opacity: 0.6;
+  }
+}
+.btn.btn-accent {
+  color: #5769ec !important;
+  border: 0.2rem #5769ec solid;
+}
+.btn.btn-white {
+  color: #fff !important;
+  border: 0.2rem #fff solid;
+}
+
+/* @font-face declarations */
+@font-face {
+  font-family: "Filson Pro";
+  src: url("../fonts/filson_pro_bold-webfont.eot");
+  src: url("../fonts/filson_pro_bold-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/filson_pro_bold-webfont.woff2") format("woff2"),
+    url("../fonts/filson_pro_bold-webfont.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Filson Pro";
+  src: url("../fonts/filson_pro_medium-webfont.eot");
+  src: url("../fonts/filson_pro_medium-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/filson_pro_medium-webfont.woff2") format("woff2"),
+    url("../fonts/filson_pro_medium-webfont.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Filson Pro";
+  src: url("../fonts/filson_pro_book-webfont.eot");
+  src: url("../fonts/filson_pro_book-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/filson_pro_book-webfont.woff2") format("woff2"),
+    url("../fonts/filson_pro_book-webfont.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+/* Typography */
+body {
+  -webkit-font-smoothing: antialiased;
+  font-family: "Filson Pro", "Helvetica", "Arial", sans-serif;
+  color: #000;
+  font-weight: 400;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 2.4rem;
+  line-height: 3.4rem;
+  color: #606068;
+}
+@media (min-width: 840px) {
+  h1 {
+    font-size: 3.6rem;
+    line-height: 4.2rem;
+  }
+}
+
+h2 {
+  color: #606068;
+  font-size: 1.8rem;
+  line-height: 2.6rem;
+  padding-bottom: 2.4rem;
+}
+@media (min-width: 840px) {
+  h2 {
+    font-size: 3.2rem;
+    line-height: 3.6rem;
+    padding-bottom: 4rem;
+  }
+}
+
+@media (min-width: 840px) {
+  h3 {
+    font-weight: 600;
+    font-size: 2.3rem !important;
+  }
+}
+
+p,
+h3,
+p a,
+li {
+  font-size: 1.3rem;
+  line-height: 2.2rem;
+  margin: 0.5rem 0;
+}
+@media (min-width: 840px) {
+  p,
+  h3,
+  p a,
+  li {
+    font-size: 1.7rem;
+    line-height: 2.8rem;
+    margin: 1rem 0;
+  }
+  p.subhead,
+  h3.subhead,
+  p a.subhead,
+  li.subhead {
+    font-size: 2.3rem;
+    line-height: 3.8rem;
+  }
+}
+
+#faq ul {
+  list-style-type: disc;
+  padding-left: 3rem;
+}
+
+#faq ul,
+#faq li {
+  margin: 0;
+}
+
+strong,
+b {
+  font-weight: 600;
+}
+
+i {
+  font-style: italic;
+}
+
+p a,
+h3 a {
+  font-size: inherit;
+  font-weight: 600;
+  color: #1e1f23;
+  text-decoration: none;
+}
+p a.arrow svg,
+h3 a.arrow svg {
+  margin-left: 0.8rem;
+  width: 2rem;
+  height: 0.8rem;
+  transition: width 0.3s;
+  overflow: visible;
+}
+@media (hover: hover) {
+  p a.arrow svg:hover,
+  h3 a.arrow svg:hover {
+    width: 3rem;
+  }
+}
+p a.arrow line,
+h3 a.arrow line {
+  stroke-width: 0.2rem;
+}
+p a.arrow-yellow marker,
+h3 a.arrow-yellow marker {
+  fill: #5769ec;
+}
+p a.arrow-yellow line,
+h3 a.arrow-yellow line {
+  stroke: #5769ec;
+}
+p a.arrow-white marker,
+h3 a.arrow-white marker {
+  fill: #fff;
+}
+p a.arrow-white line,
+h3 a.arrow-white line {
+  stroke: #fff;
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .arrow {
+    display: none;
+  }
+}
+a.blue-link {
+  color: #5769ec;
+  font-weight: initial;
+  transition: opacity 0.3s;
+}
+@media (hover: hover) {
+  a.blue-link:hover {
+    opacity: 0.6;
+  }
+}
+
+/* Header styles */
+#header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  background-color: rgba(255, 255, 255, 0.94);
+  z-index: 999;
+}
+#header .btn {
+  margin-top: 0.8rem;
+}
+
+#nav {
+  height: 100%;
+}
+#nav .nav-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+#nav .nav-bar {
+  height: 6rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (min-width: 960px) {
+  #nav .nav-bar {
+    display: none;
+  }
+}
+#nav .nav-drawer-mobile {
+  text-align: center;
+  width: 100%;
+  position: absolute;
+  height: calc(100vh - 6rem);
+  background-color: rgba(255, 255, 255, 0.94);
+  display: none;
+}
+#nav .nav-item-wrapper {
+  height: 100%;
+  margin-top: -2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (min-width: 840px) {
+  #nav .nav-item-wrapper {
+    flex-direction: column;
+  }
+}
+#nav .nav-drawer-desktop {
+  display: none;
+}
+@media (min-width: 960px) {
+  #nav .nav-drawer-desktop {
+    display: block;
+    position: fixed;
+    left: 0;
+    height: 100vh;
+    z-index: 9999;
+    width: 15rem;
+    text-align: left;
+    background-color: rgba(255, 255, 255, 0.95);
+  }
+}
+#nav .nav-item {
+  margin: 1rem 0;
+}
+#nav .nav-item a {
+  font-size: 1.6rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: #1e1f23;
+  transition: 0.3s;
+}
+#nav .nav-item.active a {
+  color: #5769ec;
+}
+@media (hover: hover) {
+  #nav .nav-item:hover a {
+    color: #5769ec;
+  }
+}
+#nav .menu {
+  position: absolute;
+  left: 10vw;
+}
+@media (min-width: 840px) {
+  #nav .menu {
+    left: 10vw;
+  }
+}
+
+.logo img {
+  height: 2.8rem;
+}
+
+.logo-desktop {
+  display: none;
+}
+@media (min-width: 960px) {
+  .logo-desktop {
+    display: inline-block;
+  }
+}
+.logo-desktop img {
+  height: 4rem;
+  margin-left: -2.2rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Footer styles */
+#sign-up {
+  background-color: #1e1f23;
+}
+#sign-up p,
+#sign-up h3,
+#sign-up p a,
+p #sign-up a,
+#sign-up h2,
+#sign-up a {
+  color: #fff;
+}
+
+#footer {
+  height: 10rem;
+  background-color: black;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#footer p,
+#footer h3,
+#footer p a,
+p #footer a,
+#footer a {
+  color: #fff;
+  font-weight: 600;
+}
+@media (min-width: 840px) {
+  #footer p,
+  #footer h3,
+  #footer p a,
+  p #footer a,
+  #footer a {
+    margin-top: 1.1rem;
+  }
+}
+#footer .container {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+@media (min-width: 840px) {
+  #footer .container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.design-logo img {
+  height: 2.6rem;
+  margin-top: 1rem;
+}
+@media (min-width: 840px) {
+  .design-logo img {
+    margin-top: 0.6rem;
+    height: 3.7rem;
+  }
+}
+
+/* Home page */
+#speakers .container,
+#schedule .container,
+#faq .container,
+#a-look-back .container {
+  padding-bottom: 0rem;
+}
+@media (min-width: 840px) {
+  #speakers .container,
+  #schedule .container,
+  #faq .container,
+  #a-look-back .container {
+    padding-bottom: 1rem;
+  }
+}
+
+/****** HOME ******/
+#home {
+  margin-top: 6rem;
+}
+#home h2 {
+  color: #000;
+  padding: 0;
+}
+#home .sony-logo {
+  margin: 5rem 0 4rem;
+  width: 28rem;
+}
+@media (min-width: 960px) {
+  #home {
+    margin-top: 0;
+  }
+}
+@media (min-width: 960px) {
+  #home .container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 4rem 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 4rem;
+    grid-template-areas: "home-photo home-info";
+    align-items: flex-end;
+  }
+}
+#home .container .info {
+  grid-area: home-info;
+}
+#home .container .hero-desktop {
+  grid-area: home-photo;
+}
+@media (min-width: 960px) {
+  #home .container .info {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+  }
+  #home .container .hero-desktop {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+}
+#home .caption {
+  margin: 1.5rem 0;
+}
+#home h1 {
+  font-size: 6rem;
+  margin: 1rem 0 3rem -0.4rem;
+}
+@media (min-width: 840px) {
+  #home h1 {
+    font-size: 8.4rem;
+    margin: 2.5rem 0 4rem -0.5rem;
+  }
+}
+
+.hero {
+  background-image: url("../images/landing.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 35rem;
+}
+@media (min-width: 960px) {
+  .hero {
+    display: none;
+  }
+}
+
+.hero-desktop {
+  display: none;
+}
+.hero-desktop img {
+  width: 100%;
+}
+@media (min-width: 960px) {
+  .hero-desktop {
+    display: inline-block;
+    margin-left: -7rem;
+  }
+}
+@media (min-width: 1280px) {
+  .hero-desktop {
+    margin-left: -11rem;
+  }
+}
+
+/****** ABOUT ******/
+@media (min-width: 600px) {
+  #about {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: auto 4rem auto;
+    grid-template-columns: auto auto;
+    grid-column-gap: 4rem;
+    grid-template-areas: "about-text about-photo";
+  }
+}
+#about .container {
+  grid-area: about-text;
+}
+@media (min-width: 600px) {
+  #about .container {
+    padding-right: 2rem;
+  }
+}
+@media (min-width: 840px) {
+  #about .container {
+    padding-right: 3rem;
+  }
+}
+@media (min-width: 960px) {
+  #about .container {
+    padding-right: 5rem;
+  }
+}
+#about h2 {
+  padding-bottom: 1.2rem;
+}
+
+.about-img {
+  grid-area: about-photo;
+  display: none;
+  overflow: hidden;
+  background-image: url("../images/about.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+@media (min-width: 600px) {
+  #about .container {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .about-img {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+  }
+}
+@media (min-width: 600px) {
+  .about-img {
+    display: block;
+    height: 100%;
+    width: 33vw;
+  }
+}
+
+/****** FAQ ******/
+@media (min-width: 600px) {
+  #faq-container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.faq-container {
+  padding-left: 4rem;
+  margin-left: -12rem !important;
+}
+.faq-container .grid__item {
+  padding-left: 12rem !important;
+}
+
+.faq-item {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+.faq-item p,
+.faq-item h3,
+.faq-item p a,
+p .faq-item a {
+  margin: 0;
+  padding: 0;
+}
+@media (min-width: 840px) {
+  .faq-item {
+    margin-bottom: 3.5rem;
+  }
+}
+
+.q {
+  cursor: pointer;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+.q:before {
+  line-height: 0;
+  transition: 0.3s;
+  content: "\d7";
+  position: absolute;
+  font-size: 2.3rem;
+  color: #1e1f23;
+  left: -4rem;
+  margin-top: 1.1rem;
+  -webkit-transform-origin: center 0.1rem;
+  transform-origin: center 0.1rem;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+@media (min-width: 840px) {
+  .q:before {
+    font-size: 3rem;
+    margin-top: 1.4rem;
+  }
+}
+.q.active:before {
+  color: #5769ec;
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.a {
+  display: none;
+}
+
+#talks h2 {
+  padding-bottom: 1.2rem;
+}
+#talks h3 {
+  margin-top: 2rem;
+}
+
+/****** SPEAKERS ******/
+#speakers {
+  margin-bottom: 6rem;
+}
+#speakers .card-text {
+  padding: 0 0.2rem;
+}
+#speakers .title {
+  margin-top: -0.8rem;
+}
+
+/****** SCHEDULE ******/
+#schedule p,
+#schedule h3,
+#schedule p a,
+p #schedule a {
+  margin: 0;
+  padding: 0;
+}
+@media (min-width: 1280px) {
+  #schedule .schedule-container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 8rem 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 8rem;
+    grid-template-areas: "schedule-info schedule-photo";
+  }
+}
+
+.schedule-item {
+  padding: 0 0 1.6rem 3.8rem;
+  position: relative;
+}
+.schedule-item:not(:last-child):before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  left: 0.45rem;
+  margin-top: 0.6rem;
+  height: 100%;
+  width: 0.3rem;
+  background-color: #5769ec;
+}
+@media (min-width: 600px) {
+  .schedule-item:not(:last-child):before {
+    margin-top: 0.8rem;
+    left: 12.45rem;
+  }
+}
+@media (min-width: 600px) {
+  .schedule-item {
+    padding-left: 0;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 18rem 1fr;
+    grid-template-columns: 18rem 1fr;
+    grid-template-areas: "schedule-time schedule-title";
+  }
+}
+
+.schedule-title {
+  grid-area: schedule-title;
+}
+
+.schedule-time {
+  grid-area: schedule-time;
+  font-weight: 600;
+}
+
+@media (min-width: 600px) {
+  .schedule-title {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+  .schedule-time {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+}
+.schedule-time:before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  margin-top: 0.6rem;
+  height: 0.5rem;
+  width: 0.5rem;
+  border-radius: 1rem;
+  border: 0.4rem solid #5769ec;
+  background-color: #fff;
+}
+@media (min-width: 600px) {
+  .schedule-time:before {
+    margin-top: 0.8rem;
+    left: 12rem;
+  }
+}
+
+.schedule-info {
+  grid-area: schedule-info;
+}
+
+.schedule-photo {
+  grid-area: schedule-photo;
+  display: none;
+  text-align: right;
+  background-image: url("../images/agenda.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+@media (min-width: 1280px) {
+  .schedule-info {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .schedule-photo {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+  }
+}
+@media (min-width: 1280px) {
+  .schedule-photo {
+    display: inline-block;
+  }
+}
+
+/****** A LOOK BACK ******/
+#a-look-back .card {
+  margin-bottom: 4rem;
+}
+@media only screen and (min-width: 481px) {
+  #a-look-back .card {
+    margin-bottom: 0;
+  }
+}
+
+/******* PARTNERS *******/
+.partner-container {
+  max-width: 40rem;
+  margin-bottom: 4rem;
+  text-align: center;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1rem 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1rem;
+  grid-template-areas: "partner-sony partner-dlab";
+}
+.partner-container a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 8rem;
+}
+.partner-container a:first-child img {
+  padding-right: 3rem;
+}
+@media (min-width: 840px) {
+  .partner-container a:first-child img {
+    padding-right: 5rem;
+  }
+}
+.partner-container img {
+  width: 100%;
+  box-sizing: border-box;
+}
+.partner-container .partner-sony {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: partner-sony;
+}
+.partner-container .partner-dlab {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: partner-dlab;
+}
+
+#sign-up h2 {
+  padding-bottom: 0;
+}
